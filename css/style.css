@@ -1,0 +1,175 @@
+* {
+    color: hsl(0, 0%, 100%);
+    font-family: Inter, Lexand Deca
+}
+
+@font-face {
+    font-family: Iter;
+    src: url("../fonts/Iter.ttf")
+}
+
+@font-face {
+    font-family: Lexand Deca;
+    src: url("../fonts/LexandDeca.ttf")
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    flex-direction: column;
+    height: 95vh;
+    background-color: white;
+}
+
+.card {
+    background-color: hsl(233, 47%, 7%);
+    width: 1440px;
+    height: 80vh;
+    padding-top: auto;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 70%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: hsl(244, 38%, 16%);
+}
+
+.desktop-img {
+    width: 100%;
+    height: 100%;
+    filter: sepia(100%) hue-rotate(277deg);
+}
+
+.mobile-img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    filter: sepia(100%) hue-rotate(277deg);
+}
+
+.text-section {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 75%;
+    width: 71%;
+}
+
+.title {
+    font-size: 32px;
+}
+
+.title > b {
+    color: hsl(277, 64%, 61%);
+}
+
+.description {
+    font-size: 15px;
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-top: 20px;
+    flex-grow: 2;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stat-metric {
+    font-size: 24px;
+}
+
+.stat-header {
+    color: hsla(0, 0%, 100%, 0.6);
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    display: box;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    color: black;
+}
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+    }
+
+@media only screen and (max-width: 375px) {
+
+    body {
+        height: 100vh;
+        margin: 0;
+        background-color: hsl(233, 47%, 7%);
+    }
+
+    .card {
+        height: 100%;
+        width: 100%;
+    }
+
+    .container {
+        display: flex;
+        flex: 1;
+        flex-direction: column-reverse;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 10px;
+        height: 90vh;
+    }
+
+    .desktop-img {
+        display: none;
+    }
+
+    .mobile-img {
+        display: block;
+        width: 100%;
+        height: 30vh;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .text-section {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: 90%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .description {
+        flex-grow: 0;
+    }
+
+    .stats {
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 25px;
+    }
+
+    .attribution {
+        margin-bottom: 10px;
+        color: white;
+    }
+}
